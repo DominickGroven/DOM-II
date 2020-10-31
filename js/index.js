@@ -69,3 +69,47 @@ window.addEventListener('scroll', function (e) {
 });
 
 //6
+
+const navLink = document.querySelector(".nav-link")
+
+function backColor(event){
+    navLink.style.backgroundColor = 'orange';
+}
+navLink.addEventListener('click', backColor);
+
+//7
+
+const btn = document.querySelector('.btn')
+
+btn.addEventListener('mouseenter', function (event) {
+    event.target.style.backgroundColor = "orange";
+})
+
+//8
+
+const dest =document.querySelector('.destination p');
+
+document.addEventListener('keydown', (event) => {
+    if (event.key === "b"){
+        dest.style.color = 'orange';
+    }
+})
+
+//9
+const travelText = document.querySelector(".intro p");
+
+document.addEventListener('click', (event) =>{
+    if (event.target === travelText){
+    travelText.style.transform = "scale(1.5)"
+    }
+}) 
+
+//10
+const mouse1 = document.querySelector('.intro');
+mouse1.addEventListener('mouseup', function () {
+    window.alert('You discovered the intro. You are awesome!');
+})
+
+window.addEventListener("close", function (event) {
+    event.preventDefault();
+}, false); 
